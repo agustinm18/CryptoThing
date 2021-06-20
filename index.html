@@ -1,0 +1,54 @@
+<!DOCTYPE html><html><head>
+  <script src="p5.js"></script>
+  <script src="p5.dom.min.js"></script>
+  <script src="p5.sound.min.js"></script>
+<script src="./p5.play.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+
+</head>
+
+<body style="background-color: #6600cc;">
+  <h1>
+    <div class="bigStuff" style="text-align: center; font-size: 96; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+      <center>
+        <big>
+        <big>
+        <big>
+        ETHEREUM MINING
+      </center>
+    </div>
+  </h1>
+
+<center>
+  <img src = "pic1.png">
+</center>
+
+  <div style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    <center> 
+      Amount Mined:  
+      <span id="time">
+        0
+      </span>
+    </center>
+  </div>
+
+<center>
+  <input type="button" id="startTimer" value="Start Mining" onclick="start();" style="justify-content: center; align-self:center;font-size: 96; scale:30px"></center><br/>
+      <script>
+          var timeElapsed = 0;
+          var timerID = -1;
+
+          function tick() {
+              timeElapsed = 0.0003562+timeElapsed;
+              document.getElementById("time").innerHTML = timeElapsed;
+          }
+
+          function start() {
+              if(timerID == -1){
+                  timerID = setInterval(tick, 1000);
+              }
+          }
+      </script>
+  </body>
+</html>
